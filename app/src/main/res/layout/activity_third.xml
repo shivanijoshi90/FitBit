@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#282329"
+    android:orientation="vertical"
+    tools:context=".Third_Activity">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:src="@drawable/baseline_arrow_back_24"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="180dp"
+        android:text="Reset your Password"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="32dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="240dp"
+        android:gravity="center"
+        android:text="Please enter your email address.You will receive a link to create a new password via email"
+        android:textColor="#8F8585"
+        android:textSize="18dp" />
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="400dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/color"
+        android:hint="Your email"
+        android:gravity="left|center"
+        android:textColorHint="#8F8585"
+        android:paddingStart="20dp"
+        android:textSize="19dp"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/btnlog"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="250dp"
+        android:backgroundTint="#E91E63"
+        android:text="Login"
+        android:textSize="20dp"/>
+
+</FrameLayout>
