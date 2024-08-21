@@ -21,7 +21,7 @@
             />
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             app:cardCornerRadius="20dp"
             android:layout_marginTop="290dp"
             app:cardElevation="10dp"
@@ -83,7 +83,7 @@
                     android:text="Login"
                     android:textSize="20dp"/>
                 <TextView
-
+                    android:id="@+id/txtforgot"
                     android:layout_width="150dp"
                     android:layout_height="18dp"
                     android:layout_marginLeft="101dp"
@@ -104,19 +104,20 @@
                         android:layout_alignParentLeft="true"
                         android:layout_marginLeft="73dp"
                         android:layout_alignParentTop="true"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="0dp"
                         android:text="Don't have an account?"
-                        android:gravity="center"
+                        android:gravity="left"
                         android:textColor="#8F8585"
                         />
                     <TextView
+                        android:id="@+id/txtsign"
                         android:layout_gravity="center"
                         android:layout_width="215dp"
                         android:layout_height="17dp"
                         android:layout_alignParentTop="true"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="0dp"
                         android:text="Sign up"
-                        android:layout_marginLeft="-30dp"
+                        android:layout_marginLeft="-70dp"
                         android:textColor="#E91E63"
                         />
 

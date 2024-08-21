@@ -3,6 +3,7 @@ package com.example.fitbit;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +23,22 @@ public class Second_Activity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         binding = ActivitySecondBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        binding.txtforgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Second_Activity.this, "Forgot Password", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        binding.txtsign.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Second_Activity.this, "Sign Up", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
         binding.btnlog1.setOnClickListener(new View.OnClickListener() {
             @Override

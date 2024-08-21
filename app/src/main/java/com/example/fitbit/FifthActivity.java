@@ -1,8 +1,10 @@
 package com.example.fitbit;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,47 +12,40 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.fitbit.databinding.ActivitySecondBinding;
-import com.example.fitbit.databinding.ActivityThirdBinding;
+import com.example.fitbit.databinding.ActivityFifthBinding;
 
-public class Third_Activity extends AppCompatActivity {
-    private ActivityThirdBinding binding;
+public class FifthActivity extends AppCompatActivity {
+    private ActivityFifthBinding binding;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        binding = ActivityThirdBinding.inflate(getLayoutInflater());
+        binding = ActivityFifthBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        binding.countryCodeSpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, getCountryCodes()));
 
-        binding.back.setOnClickListener(new View.OnClickListener() {
+
+        binding.btnnxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Third_Activity.this, Second_Activity.class);
-                startActivity(intent);
+                Intent intent = new Intent(FifthActivity.this, MainActivity.class);
+
 
             }
         });
-        binding.btnlog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Intent intent = new Intent(Third_Activity.this, Fourth_Activity2.class);
-                startActivity(intent);
+    }
 
-            }
-
-
-        });
-
-
-
+    private int getCountryCodes() {
+        return 0;
 
     }
 }

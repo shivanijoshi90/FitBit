@@ -32,17 +32,19 @@ public class Fourth_Activity2 extends AppCompatActivity {
         binding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+
+                Intent intent = new Intent(Fourth_Activity2.this, Third_Activity.class);
+
             }
         });
 
-//        binding.btnlog.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Fourth_Activity2.this, Activity4.class);
-//                startActivity(intent);
-//
-//            }
-//        });
+        binding.btnlog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Fourth_Activity2.this, FifthActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 }
